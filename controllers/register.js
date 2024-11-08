@@ -45,7 +45,7 @@ const register = async (req, res) => {
         }
         const hashedPassword = await bcrypt.hash(password, 10);
         insertUser(name, email, hashedPassword);
-        // req.session.user_id = getUserId(email);
+        req.session.user_id = getUserId(email);
         res.send();
     }
 }
