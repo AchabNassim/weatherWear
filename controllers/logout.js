@@ -3,6 +3,7 @@ const logout = async (req, res) => {
         res.status(401).send("User is not authenticated");
     } else {
         req.session.destroy();
+        res.send("Success");
     }
 }
 

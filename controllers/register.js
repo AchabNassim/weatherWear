@@ -1,5 +1,7 @@
-import client from "../config/dbConnection.js";
 import bcrypt from "bcrypt";
+import accountExists from '../model/accountExists.js'
+import fetchUser from "../model/fetchUser.js";
+import insertUser from "../model/insertUser.js"
 
 const validateData = (name, email, password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*[\W_])(?=.*\d).+$/;
@@ -12,24 +14,6 @@ const validateData = (name, email, password) => {
     }
     return (true);
 };
-
-const accountExists = async (email) => {
-    const query = `SELECT * FROM \"user\" WHERE email='${email}'`;
-    const res = await client.query(query);
-    return (res.rows.length > 0);
-}
-
-const insertUser = async (name, email, password) => {
-    const query = `INSERT INTO "user"(name, email, password) VALUES ('${name}', '${email}', '${password}')`;
-    const res = await client.query(query);
-}
-
-const getUserId = async (email) => {
-    const query = `SELECT id FROM "user" WHERE email='${email}'`
-    const res = await client.query(query);
-    // console.log(res.rows);
-    return (res.rows[0].id);
-}
 
 const register = async (req, res) => {
     if (req.session.user_id) {
@@ -45,7 +29,8 @@ const register = async (req, res) => {
         }
         const hashedPassword = await bcrypt.hash(password, 10);
         insertUser(name, email, hashedPassword);
-        req.session.user_id = getUserId(email);
+        const user = await fetchUser(email);
+        req.session.user_id = user.id;
         res.send();
     }
 }
