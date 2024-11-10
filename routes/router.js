@@ -6,6 +6,7 @@ import generateKey from '../controllers/generateKey.js';
 import retrieveKeyById from '../controllers/retrieveKeyById.js'
 import retrieveKey from '../controllers/retrieveKey.js'
 import updateKey from '../controllers/updateKey.js'
+import makeApiCall from '../controllers/makeApiCall.js';
 
 const router = express.Router();
 
@@ -23,5 +24,8 @@ router.get('/generate_key', generateKey);
 router.get('/get_key', retrieveKeyById);
 router.post('/get_key', retrieveKey);
 router.get('/update_key', updateKey);
+
+// api management routes
+router.post('/service', makeApiCall);
 
 export default router;
