@@ -6,7 +6,8 @@ import generateKey from '../controllers/generateKey.js';
 import retrieveKeyById from '../controllers/retrieveKeyById.js'
 import retrieveKey from '../controllers/retrieveKey.js'
 import updateKey from '../controllers/updateKey.js'
-import getSuggestion from '../controllers/makeApiCall.js';
+import getSuggestion from '../controllers/getSuggestion.js';
+import retrieveHistory from '../controllers/retrieveHistory.js';
 
 const router = express.Router();
 
@@ -27,6 +28,7 @@ router.get('/update_key', updateKey);
 
 // api management routes
 router.post('/service', getSuggestion);
+router.get('/user_history', retrieveHistory);
 // fetch user call history
 // fetch all user calls (for admin)
 

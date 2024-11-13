@@ -15,7 +15,7 @@ const generateKey = async (req, res) => {
         if (record) {
             res.status(500).send("Server internal error, please try again");
         } else {
-            const result = await insertKey(req.session.user_id, key);
+            insertKey(req.session.user_id, key);
             res.send(`Generated key successfully "${key}"`);
         }
     } else {
