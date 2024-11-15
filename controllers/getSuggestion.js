@@ -25,23 +25,30 @@ const validateKey = async (key) => {
 const makeSuggestion = async (result) => {
     const temperature = result.current.temp_c;
     const condition = result.current.condition.text;
-    let suggestion = {};
+    let suggestion = [];
 
     const data = await fs.promises.readFile(suggestionsPath, {encoding: 'utf8'});
     const parsedData = await JSON.parse(data);
 
     switch (true) {
         case (temperature >= 24) :
-            suggestion = {...parsedData.summer}
+            suggestion.push(parsedData.summer);
             break ;
         case (temperature >= 16 && temperature < 24):
-            suggestion = {...parsedData.spring_fall}
+            suggestion.push(parsedData.spring_fall);
             break ;
         case (temperature < 16):
-            suggestion = {...parsedData.winter}
+            suggestion.push(parsedData.winter);
             break ;
         default:
             break;
+    }
+    if (condition.includes("rain") || condition.includes("snow")) {
+        if (temperature < 16) {
+            suggestion.push(parsedData.cold_and_wet);
+        } else {
+            suggestion.push(parsedData.rainy);
+        }
     }
     return (suggestion);
 }
@@ -57,7 +64,7 @@ const apiCall = async (city) => {
         }
         const result = await res.json();
         const suggestion = await makeSuggestion(result);
-        return (suggestion);
+        return (JSON.stringify(suggestion));
     } catch (e) {
         return ([]);
     }

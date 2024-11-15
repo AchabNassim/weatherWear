@@ -10,11 +10,11 @@
     },
 
     "spring_fall": {
-        "Outwear": ["Light Jacket", "Denim Jacket", "Bomber Jacket", "Trench Coat", "Windbreaker", "Utility Jacket", "Quilted Jacket", "Harrington Jacket", "Light Parka"],
+        "Outwear": ["Lightweight Layering Jacket", "Shacket", "Anorak", "Light Jacket", "Denim Jacket", "Bomber Jacket", "Trench Coat", "Windbreaker", "Utility Jacket", "Quilted Jacket", "Harrington Jacket", "Light Parka"],
     
-        "Upper Body": ["Light Sweater", "Cardigan", "Henley", "Long Sleeve T-Shirt", "Crewneck Sweater", "Blouse", "Chambray Shirt", "Button-Up Shirt", "Light Hoodie"],
+        "Upper Body": ["Lightweight Long-Sleeve Shirt", "Layering T-Shirt", "Light Sweater", "Cardigan", "Henley", "Long Sleeve T-Shirt", "Crewneck Sweater", "Blouse", "Chambray Shirt", "Button-Up Shirt", "Light Hoodie"],
     
-        "Lower Body": ["Chinos", "Jeans", "Joggers", "Corduroy Pants", "Light Trousers", "Cargo Pants"],
+        "Lower Body": ["Lightweight Pants", "Tapered Pants", "Chinos", "Jeans", "Joggers", "Corduroy Pants", "Light Trousers", "Cargo Pants"],
     
         "Accessories": ["Scarf", "Thin Beanie", "Light Gloves", "Baseball Cap", "Loafers", "Sneakers", "Ankle Boots", "Light Socks", "Bandana"]
     },
@@ -37,12 +37,6 @@
     "cold_and_wet": {
         "Outwear": ["Waterproof Parka", "Insulated Raincoat"],
         "Accessories": ["Waterproof Gloves", "Insulated Waterproof Boots", "Thermal Socks"]
-    },
-
-    "early_spring_fall": {
-        "Outwear": ["Lightweight Layering Jacket", "Shacket", "Anorak"],
-        "Upper Body": ["Lightweight Long-Sleeve Shirt", "Layering T-Shirt"],
-        "Lower Body": ["Lightweight Pants", "Tapered Pants"]
     },
 
     "hot_and_humid": {

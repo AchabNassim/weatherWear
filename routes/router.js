@@ -27,7 +27,7 @@ router.post('/get_key', retrieveKey); // retrieves api key info with the key its
 router.get('/update_key', updateKey); // generates a new key and updates the old one with the newly created one
 
 // api management routes
-router.post('/service', getSuggestion); // get clothing categories suggestions based on the weather on the user, requires api key and a city in the req body
+router.post('/service', getSuggestion); // get clothing categories suggestions based on the weather on the user, requires api key and a city in the req body, returns an array of suggestions, the first object is the main suggestions, the second suggestions object is only added if there is rain.
 router.get('/user_history', retrieveHistory); // returns the history of api calls of the user, requires the user to be authenticated
 
 export default router;
