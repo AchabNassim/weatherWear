@@ -16,20 +16,18 @@ router.get('/', (req, res) => {
 });
 
 // authentication routes
-router.post('/register', register);
-router.post('/login', login);
-router.get('/logout', logout);
+router.post('/register', register); // registers, creates a session, requires name, email and a password with an uppercase letter, a number and a special character
+router.post('/login', login); // login, creates session, requires email and password
+router.get('/logout', logout); // destroys session
 
 // key management routes
-router.get('/generate_key', generateKey);
-router.get('/get_key', retrieveKeyById);
-router.post('/get_key', retrieveKey);
-router.get('/update_key', updateKey);
+router.get('/generate_key', generateKey); // generates api key, requires user to be authenticated
+router.get('/get_key', retrieveKeyById); // retrieves api key info with user id, requires user to be authenticated
+router.post('/get_key', retrieveKey); // retrieves api key info with the key itself, requires key in request
+router.get('/update_key', updateKey); // generates a new key and updates the old one with the newly created one
 
 // api management routes
-router.post('/service', getSuggestion);
-router.get('/user_history', retrieveHistory);
-// fetch user call history
-// fetch all user calls (for admin)
+router.post('/service', getSuggestion); // get clothing categories suggestions based on the weather on the user, requires api key and a city in the req body
+router.get('/user_history', retrieveHistory); // returns the history of api calls of the user, requires the user to be authenticated
 
 export default router;
