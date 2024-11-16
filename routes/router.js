@@ -11,7 +11,7 @@ import retrieveHistory from '../controllers/retrieveHistory.js';
 
 const router = express.Router();
 
-router.use('/', express.static('../views.router.html'));
+router.use('/', express.static('../views/router.html'));
 
 // authentication routes
 router.post('/register', register); // registers, creates a session, requires name, email and a password with an uppercase letter, a number and a special character
