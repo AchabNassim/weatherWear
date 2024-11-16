@@ -4,6 +4,7 @@ import session from 'express-session';
 import bodyParser from 'body-parser';
 import router from './routes/router.js';
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors({
@@ -21,6 +22,4 @@ app.use(bodyParser.json());
 
 app.use(router);
 
-app.listen(3000, () => {
-    console.log("App is listening on http://localhost:3000 \n");
-})
+app.listen(PORT);
