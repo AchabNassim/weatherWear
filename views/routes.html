@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Routes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .route-section {
+            margin-bottom: 20px;
+        }
+        .route {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .route p {
+            margin: 5px 0;
+        }
+        code {
+            display: block;
+            background: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Routes</h1>
+
+    <div class="route-section">
+        <h2>User Authentication Routes</h2>
+        <div class="route">
+            <p><strong>POST /register</strong> - Registers a new user</p>
+            <code>Requires: name, email, password</code>
+        </div>
+        <div class="route">
+            <p><strong>POST /login</strong> - Logs in a user</p>
+            <code>Requires: email, password</code>
+        </div>
+        <div class="route">
+            <p><strong>GET /logout</strong> - Logs out the user</p>
+        </div>
+    </div>
+
+    <div class="route-section">
+        <h2>Key Management Routes</h2>
+        <div class="route">
+            <p><strong>GET /generate_key</strong> - Generates an API key</p>
+            <code>Requires user to be authenticated</code>
+        </div>
+        <div class="route">
+            <p><strong>GET /get_key</strong> - Retrieves API key info using user ID</p>
+            <code>Requires user to be authenticated</code>
+            <code>Returns: 
+            {
+                "key": "generated_key",
+                "createdAt": "2024-11-16T10:00:00Z",
+                "tokensAvailable": 100
+            }</code>
+        </div>
+        <div class="route">
+            <p><strong>POST /get_key</strong> - Retrieves API key info using the key</p>
+            <code>Requires: API key in request</code>
+            <code>Returns: 
+            {
+                "key": "provided_key",
+                "createdAt": "2024-11-16T10:00:00Z",
+                "tokensAvailable": 100
+            }</code>
+        </div>
+        <div class="route">
+            <p><strong>GET /update_key</strong> - Updates the API key</p>
+            <code>Generates a new key and updates the old one</code>
+        </div>
+    </div>
+
+    <div class="route-section">
+        <h2>API Management Routes</h2>
+        <div class="route">
+            <p><strong>POST /service</strong> - Get clothing suggestions based on weather</p>
+            <code>Requires: API key, city in request body</code>
+            <code>Returns: 
+            [
+                {
+                    "Outwear": "Jacket",
+                    "Upper Body": "Sweater",
+                    "Lower Body": "Jeans",
+                    "Accessories": "Scarf"
+                },
+                {
+                    "Outwear": "Raincoat",
+                    "Accessories": "Umbrella"
+                }
+            ]</code>
+            <p>Note: The second object is included only if the weather condition includes rain.</p>
+        </div>
+        <div class="route">
+            <p><strong>GET /user_history</strong> - Retrieves user history</p>
+        </div>
+    </div>
+</body>
+</html>
