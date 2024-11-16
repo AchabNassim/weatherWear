@@ -1,4 +1,6 @@
 import express from 'express'
+import fs from 'node:fs';
+import path from 'path';
 import register from '../controllers/register.js';
 import login from '../controllers/login.js';
 import logout from '../controllers/logout.js';
@@ -9,9 +11,12 @@ import updateKey from '../controllers/updateKey.js'
 import getSuggestion from '../controllers/getSuggestion.js';
 import retrieveHistory from '../controllers/retrieveHistory.js';
 
+const htmlPagePath = path.resolve(import.meta.dirname, '../views/routes.html');
 const router = express.Router();
 
-router.use('/', express.static('../views/router.html'));
+router.use('/', (req, res) => {
+    res.sendFile(htmlPagePath);
+});
 
 // authentication routes
 router.post('/register', register); // registers, creates a session, requires name, email and a password with an uppercase letter, a number and a special character
