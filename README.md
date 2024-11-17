@@ -1,3 +1,3 @@
-An API that helps your e-commerce store provide product suggestions that meet the needs of your customers based on their local weather conditions.
+WeatherWear suggests products based on your customers' local weather. Whether it's cold and rainy, hot and sunny, or anything in between, it offers tailored options like jackets and hoodies for chilly days or robes and tank tops for high heat, ensuring relevance for all conditions.
 
-Access the API here: https://weatherwear-me7o.onrender.com
+You can access the API at: https://weatherwear-me7o.onrender.com
