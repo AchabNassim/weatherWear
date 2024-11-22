@@ -17,7 +17,7 @@ const validateData = (name, email, password) => {
 
 const register = async (req, res) => {
     if (req.session.user_id) {
-        res.status(401).send("User already authenticated");
+        res.status(200).send("User already authenticated");
     } else {
         const {name, email, password} = req.body;
         if (!validateData(name, email, password)) {
