@@ -14,7 +14,7 @@ import retrieveHistory from '../controllers/retrieveHistory.js';
 const htmlPagePath = path.resolve(import.meta.dirname, '../views/routes.html');
 const router = express.Router();
 
-router.use('/', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(htmlPagePath);
 });
 
