@@ -4,18 +4,15 @@ import fetchKeyById from '../model/fetchKeyById.js';
 import fetchKey from '../model/fetchKey.js';
 
 const generateKey = async (req, res) => {
-    if (!req.session.user_id) {
-        res.status(401).send("User is not authenticated");
-        return ;
-    }
-    const record = await fetchKeyById(req.session.user_id);
+    const id = res.locals.user.id;
+    const record = await fetchKeyById(id);
     if (!record) {
         const key = uuidv4();
-        const record = fetchKey(key);
-        if (record) {
+        const keyExists = await fetchKey(key);
+        if (keyExists) {
             res.status(500).send("Server internal error, please try again");
         } else {
-            insertKey(req.session.user_id, key);
+            insertKey(id);
             res.send(`Generated key successfully "${key}"`);
         }
     } else {

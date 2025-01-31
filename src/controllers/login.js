@@ -1,11 +1,7 @@
 import bcrypt from "bcrypt";
 import fetchUser from "../model/fetchUser.js";
 
-const login = async (req, res) => {
-    if (req.session.user_id) {
-        res.status(200).send("User already authenticated");
-        return ;
-    } else {
+const login = async (req, res, next) => {
         const {email, password} = req.body;
         const user = await fetchUser(email);
         if (!user || !user.id) {
@@ -14,12 +10,15 @@ const login = async (req, res) => {
         }
         const match = await bcrypt.compare(password, user.password);
         if (match) {
-            req.session.user_id = user.id;
-            res.send("User logged in successfully");
+            res.locals.user = {
+                id: user.id,
+                name: user.name
+            }
+            next();
+
         } else {
             res.status(401).send("User password is incorrect");
         }    
-    }
 }
 
 export default login;

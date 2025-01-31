@@ -1,0 +1,71 @@
+{
+    "winter": {
+        "Outwear": [
+            "Coat", "Jacket", "Parka", "Overcoat", "Puffer Jacket", "Raincoat", "Trench Coat", "Ski Jacket", "Windbreaker", "Fleece Jacket", "Peacoat", "Duffle Coat", "Down Jacket", "Wool Coat", "Quilted Jacket", "Faux Fur Coat", "Shearling Jacket", "Thermal Jacket", "Insulated Jacket", "Snow Jacket", "Military Jacket", "Bomber Jacket", "Reversible Jacket", "Hooded Jacket", "Longline Coat"
+        ],
+        "Upper Body": [
+            "Sweater", "Cardigan", "Turtleneck", "Hoodie", "Thermal Top", "Sweatshirt", "Vest", "Flannel Shirt", "Pullover", "Fleece Pullover", "Wool Shirt", "Cashmere Sweater", "Mock Neck Sweater", "Cable Knit Sweater", "Thermal Henley", "Wool Blend Sweater", "Oversized Sweater", "Zip-Up Hoodie", "Thermal Base Layer", "Fleece-Lined Shirt", "Wool Pullover", "Thermal Long-Sleeve"
+        ],
+        "Lower Body": [
+            "Jeans", "Sweatpants", "Leggings", "Thermal Pants", "Snow Pants", "Corduroy Pants", "Joggers", "Wool Pants", "Insulated Pants", "Snow Bibs", "Fleece-Lined Pants", "Thermal Leggings", "Cargo Pants", "Waterproof Pants", "Stretch Jeans", "Wide-Leg Pants", "High-Waisted Pants", "Thermal Joggers", "Fleece-Lined Jeans", "Wool Blend Pants"
+        ],
+        "Accessories": [
+            "Scarf", "Gloves", "Mittens", "Hat", "Beanie", "Earmuffs", "Boots", "Balaclava", "Neck Gaiter", "Leg Warmers", "Thermal Socks", "Wrist Warmers", "Thermal Headband", "Fleece Scarf", "Wool Gloves", "Insulated Boots", "Snow Boots", "Hand Warmers", "Fleece Hat", "Knit Gloves", "Waterproof Gloves", "Wool Socks", "Ear Warmers", "Fleece-Lined Socks"
+        ]
+    },
+    "spring_fall": {
+        "Outwear": [
+            "Lightweight Layering Jacket", "Shacket", "Anorak", "Light Jacket", "Denim Jacket", "Bomber Jacket", "Trench Coat", "Windbreaker", "Utility Jacket", "Quilted Jacket", "Harrington Jacket", "Light Parka", "Field Jacket", "Rain Jacket", "Fleece Jacket", "Puffer Vest", "Waxed Jacket", "Oversized Blazer", "Leather Jacket", "Corduroy Jacket", "Chore Coat", "Lightweight Hooded Jacket"
+        ],
+        "Upper Body": [
+            "Lightweight Long-Sleeve Shirt", "Layering T-Shirt", "Light Sweater", "Cardigan", "Henley", "Long Sleeve T-Shirt", "Crewneck Sweater", "Blouse", "Chambray Shirt", "Button-Up Shirt", "Light Hoodie", "Flannel Shirt", "Turtleneck Sweater", "V-Neck Sweater", "Oversized Sweater", "Lightweight Pullover", "Thermal Shirt", "Linen Shirt", "Cotton Shirt", "Ribbed Knit Top", "Lightweight Blouse"
+        ],
+        "Lower Body": [
+            "Lightweight Pants", "Tapered Pants", "Chinos", "Jeans", "Joggers", "Corduroy Pants", "Light Trousers", "Cargo Pants", "Wide-Leg Pants", "Cropped Pants", "High-Waisted Pants", "Stretch Jeans", "Linen Pants", "Utility Pants", "Paperbag Waist Pants", "Pleated Pants", "Ankle Pants", "Relaxed Fit Jeans", "Straight-Leg Pants", "Culottes"
+        ],
+        "Accessories": [
+            "Scarf", "Thin Beanie", "Light Gloves", "Baseball Cap", "Loafers", "Sneakers", "Ankle Boots", "Light Socks", "Bandana", "Fedora Hat", "Crossbody Bag", "Lightweight Shawl", "Leather Gloves", "Canvas Shoes", "Espadrilles", "Wool Scarf", "Bucket Hat", "Lightweight Tote Bag", "Driving Shoes", "Lightweight Backpack"
+        ]
+    },
+    "summer": {
+        "Outwear": [
+            "Light Cardigan", "Kimono", "Linen Jacket", "Denim Vest", "Chambray Shirt", "Lightweight Blazer", "Crochet Cardigan", "Mesh Jacket", "Oversized Shirt", "Breezy Cover-Up", "Linen Blazer", "Cropped Jacket", "Sheer Cardigan", "Lightweight Duster", "Sleeveless Duster", "Open-Front Cardigan", "Loose-Fit Kimono", "Cotton Jacket", "Cropped Denim Jacket", "Tie-Front Cardigan"
+        ],
+        "Upper Body": [
+            "T-Shirt", "Tank Top", "Sleeveless Top", "Polo Shirt", "Short Sleeve Shirt", "Crop Top", "Blouse", "Linen Shirt", "Camisole", "Tube Top", "Off-Shoulder Top", "Halter Top", "Bodysuit", "Graphic Tee", "Muscle Tank", "Lace Top", "Peplum Top", "Button-Down Shirt", "Ruffled Blouse", "Smocked Top", "Relaxed Fit Tee", "Tie-Front Top"
+        ],
+        "Lower Body": [
+            "Shorts", "Chino Shorts", "Linen Pants", "Capri Pants", "Culottes", "Skirt", "Denim Shorts", "High-Waisted Shorts", "Paperbag Shorts", "Bermuda Shorts", "Pleated Skirt", "Wrap Skirt", "Palazzo Pants", "Wide-Leg Shorts", "Linen Shorts", "A-Line Skirt", "Midi Skirt", "Cropped Pants", "Cargo Shorts", "Tiered Skirt", "Maxi Skirt"
+        ],
+        "Accessories": [
+            "Sunglasses", "Sun Hat", "Baseball Cap", "Sandals", "Flip Flops", "Light Scarf", "Anklet", "Beach Bag", "Straw Hat", "Visor", "Tote Bag", "Woven Belt", "Statement Earrings", "Bracelet", "Pendant Necklace", "Espadrilles", "Woven Sandals", "Crossbody Bag", "Clutch", "Fanny Pack", "Wide-Brim Hat", "Shell Necklace"
+        ]
+    },
+    "rainy": {
+        "Outwear": [
+            "Rain Jacket", "Waterproof Shell", "Poncho", "Waterproof Trench Coat", "Rain Cape", "Waterproof Parka", "Insulated Raincoat", "Waterproof Anorak", "Rain Mac", "Waterproof Blazer", "Rubberized Coat", "Waterproof Vest", "Hooded Raincoat", "Lightweight Rain Jacket", "Waterproof Windbreaker", "Packable Rain Jacket", "Waterproof Overcoat", "Reversible Rain Jacket", "Waterproof Shacket", "Waterproof Bomber Jacket"
+        ],
+        "Accessories": [
+            "Umbrella", "Waterproof Boots", "Waterproof Hat", "Rain Boots", "Waterproof Backpack", "Waterproof Gloves", "Waterproof Bag", "Rain Cover for Bag", "Waterproof Socks", "Waterproof Leggings", "Waterproof Shoe Covers", "Waterproof Watch", "Waterproof Phone Case", "Waterproof Poncho", "Waterproof Scarf", "Waterproof Earmuffs", "Waterproof Balaclava", "Waterproof Gaiter", "Waterproof Arm Sleeves", "Waterproof Tote Bag"
+        ]
+    },
+    "cold_and_wet": {
+        "Outwear": [
+            "Waterproof Parka", "Insulated Raincoat", "Waterproof Down Jacket", "Waterproof Ski Jacket", "Waterproof Trench Coat", "Waterproof Puffer Jacket", "Waterproof Fleece Jacket", "Waterproof Overcoat", "Waterproof Wool Coat", "Waterproof Quilted Jacket", "Waterproof Bomber Jacket", "Waterproof Hooded Jacket", "Waterproof Longline Coat", "Waterproof Shearling Jacket", "Waterproof Military Jacket", "Waterproof Reversible Jacket", "Waterproof Faux Fur Coat", "Waterproof Snow Jacket", "Waterproof Field Jacket", "Waterproof Chore Coat"
+        ],
+        "Accessories": [
+            "Waterproof Gloves", "Insulated Waterproof Boots", "Thermal Socks", "Waterproof Hat", "Waterproof Scarf", "Waterproof Balaclava", "Waterproof Neck Gaiter", "Waterproof Leg Warmers", "Waterproof Wrist Warmers", "Waterproof Headband", "Waterproof Earmuffs", "Waterproof Backpack", "Waterproof Tote Bag", "Waterproof Shoe Covers", "Waterproof Arm Sleeves", "Waterproof Phone Case", "Waterproof Watch", "Waterproof Poncho", "Waterproof Rain Cover", "Waterproof Hand Warmers"
+        ]
+    },
+    "hot_and_humid": {
+        "Upper Body": [
+            "Moisture-Wicking T-Shirt", "Breathable Tank Top", "Linen Shirt", "Cotton Tank", "Mesh Top", "Sleeveless Blouse", "Athletic Tee", "Quick-Dry Shirt", "Lightweight Polo", "Cropped Tank", "Halter Top", "Bamboo Fabric Top", "Seamless Tank", "Racerback Tank", "Loose-Fit Tee", "V-Neck Tee", "Breathable Crop Top", "Cooling Shirt", "UV-Protection Top", "Relaxed Fit Tank"
+        ],
+        "Lower Body": [
+            "Athletic Shorts", "Quick-Dry Shorts", "Linen Pants", "Cotton Shorts", "Bermuda Shorts", "Breathable Skirt", "Lightweight Joggers", "Capri Pants", "Culottes", "Mesh Shorts", "High-Waisted Shorts", "Loose-Fit Shorts", "Stretch Shorts", "Quick-Dry Pants", "Linen Blend Shorts", "Cropped Pants", "Wide-Leg Shorts", "Breathable Leggings", "Relaxed Fit Pants", "Cooling Shorts"
+        ],
+        "Accessories": [
+            "Sweat-Wicking Headband", "Cooling Towel", "Light, Breathable Socks", "UV-Protection Hat", "Sunglasses", "Lightweight Scarf", "Breathable Sneakers", "Sandals", "Crossbody Bag", "Water Bottle Holder", "Cooling Bandana", "Mesh Cap", "Wide-Brim Hat", "Lightweight Backpack", "Breathable Arm Sleeves", "UV-Protection Gloves", "Cooling Neck Gaiter", "Lightweight Tote Bag", "Breathable Watch Strap", "Cooling Face Mask"
+        ]
+    }
+}
