@@ -1,9 +1,18 @@
+import invalidateToken from "../model/invalidateToken.js";
+import verifyToken from "../helpers/verifyToken.js";
+
 const logout = async (req, res) => {
-    if (!req.session.user_id) {
-        res.status(401).send("User is not authenticated");
+    if (req.headers && req.headers.authorization) {
+        const token = req.headers.authorization.split(' ')[1];
+        const decoded = verifyToken(token, "refresh");
+        if (decoded) {
+            invalidateToken(token);
+            res.send("Success");
+        } else {
+            res.status(403).send();
+        }
     } else {
-        req.session.destroy();
-        res.send("Success");
+        res.status(403).send();
     }
 }
 
