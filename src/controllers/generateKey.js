@@ -12,7 +12,7 @@ const generateKey = async (req, res) => {
         if (keyExists) {
             res.status(500).send("Server internal error, please try again");
         } else {
-            insertKey(id);
+            insertKey(id, key);
             res.send(`Generated key successfully "${key}"`);
         }
     } else {

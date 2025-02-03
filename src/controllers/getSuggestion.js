@@ -3,6 +3,8 @@ import path from 'path';
 import fetchKey from '../model/fetchKey.js';
 import decrementToken from '../model/decrementToken.js';
 import insertHistory from '../model/insertHistory.js';
+import setCache from '../helpers/setCache.js'
+import retrieveCache from '../helpers/retrieveCache.js'
 
 const suggestionsPath = path.resolve(import.meta.dirname, '../suggestions.json');
 
@@ -76,11 +78,19 @@ const getSuggestion = async (req, res) => {
     if (status !== "success" || !city) {
         res.status(403).send(status);
     } else {
-        const result = await apiCall(city);
+        const cache = await retrieveCache(city);
+        let result = null;
+
+        if (cache) {
+            result = cache;
+        } else {
+            result = await apiCall(city);
+            setCache(city, result);
+        }
         decrementToken(key);
         insertHistory(key, city, result);
 
-        if (Object.keys(result).length > 0)
+        if (result && Object.keys(result).length > 0)
             res.send(result);
         else
             res.status(400).send("Bad request");
