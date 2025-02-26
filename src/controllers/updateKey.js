@@ -9,7 +9,6 @@ const updateKey = async (req, res) => {
     if (record) {
         res.status(500).send("Server internal error, please try again");
     } else {
-        console.log("entered here");
         modifyKey(id, newKey);
         res.send(`Generated key successfully "${newKey}"`);
     }

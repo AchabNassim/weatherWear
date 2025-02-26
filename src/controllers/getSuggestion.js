@@ -1,12 +1,9 @@
-import fs from 'node:fs';
-import path from 'path';
 import fetchKey from '../model/fetchKey.js';
 import decrementToken from '../model/decrementToken.js';
 import insertHistory from '../model/insertHistory.js';
-import setCache from '../helpers/setCache.js'
-import retrieveCache from '../helpers/retrieveCache.js'
-
-const suggestionsPath = path.resolve(import.meta.dirname, '../suggestions.json');
+import setCache from '../helpers/setCache.js';
+import retrieveCache from '../helpers/retrieveCache.js';
+import redisClient from '../config/redisConnection.js';
 
 const validateKey = async (key) => {
     if (!key) {
@@ -29,7 +26,7 @@ const makeSuggestion = async (result) => {
     const condition = result.current.condition.text;
     let suggestion = [];
 
-    const data = await fs.promises.readFile(suggestionsPath, {encoding: 'utf8'});
+    const data = await redisClient.get("suggestions");
     const parsedData = await JSON.parse(data);
 
     switch (true) {
