@@ -1,8 +1,8 @@
-import redisClient from "../config/redisConnection.js";
+import redisClient from "../../config/redisConnection.js";
 import fs from 'node:fs';
 import path from 'path';
 
-const suggestionsPath = path.resolve(import.meta.dirname, '../suggestions.json')
+const suggestionsPath = path.resolve(import.meta.dirname, '../../suggestions.json')
 
 const storeSuggestions = async () => {
     try {

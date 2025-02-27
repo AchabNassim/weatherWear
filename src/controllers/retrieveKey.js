@@ -1,4 +1,4 @@
-import fetchKey from '../model/fetchKey.js';
+import { fetchKey } from '../queries/keyQueries.js';
 
 const retrieveKey = async (req, res) => {
     const {key} = req.body;

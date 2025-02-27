@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import fetchUser from "../model/fetchUser.js";
+import { fetchUser } from "../queries/userQueries.js";
 
 const login = async (req, res, next) => {
         const {email, password} = req.body;

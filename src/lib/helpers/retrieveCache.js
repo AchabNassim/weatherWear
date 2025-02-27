@@ -1,4 +1,4 @@
-import redisClient from "../config/redisConnection.js";
+import redisClient from "../../config/redisConnection.js";
 
 const retrieveCache = async (city) => {
     try {

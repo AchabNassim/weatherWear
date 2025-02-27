@@ -1,7 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import insertKey from "../model/insertKey.js";
-import fetchKeyById from '../model/fetchKeyById.js';
-import fetchKey from '../model/fetchKey.js';
+import {insertKey, fetchKey, fetchKeyById} from '../queries/keyQueries.js';
 
 const generateKey = async (req, res) => {
     const id = res.locals.user.id;

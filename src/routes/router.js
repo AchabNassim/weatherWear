@@ -10,9 +10,9 @@ import updateKey from '../controllers/updateKey.js';
 import getSuggestion from '../controllers/getSuggestion.js';
 import retrieveHistory from '../controllers/retrieveHistory.js';
 import refreshToken from '../controllers/refreshToken.js';
-import sendTokens from '../middleware/genTokens.js';
-import authenticate from '../middleware/authenticate.js';
-import hasToken from '../middleware/hasToken.js';
+import sendTokens from '../lib/middleware/genTokens.js';
+import authenticate from '../lib/middleware/authenticate.js';
+import hasToken from '../lib/middleware/hasToken.js';
 
 const htmlPagePath = path.resolve(import.meta.dirname, '../views/routes.html');
 const router = express.Router();

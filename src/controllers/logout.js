@@ -1,5 +1,5 @@
-import invalidateToken from "../model/invalidateToken.js";
-import verifyToken from "../helpers/verifyToken.js";
+import verifyToken from "../lib/helpers/verifyToken.js";
+import { invalidateToken } from "../queries/refTokenQueries.js";
 
 const logout = async (req, res) => {
     if (req.headers && req.headers.authorization) {

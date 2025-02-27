@@ -1,7 +1,6 @@
 import bcrypt from "bcrypt";
-import accountExists from '../model/accountExists.js'
-import insertUser from "../model/insertUser.js"
 import { v4 as uuidv4 } from 'uuid';
+import { insertUser, accountExists } from "../queries/userQueries.js";
 
 const validateData = (name, email, password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*[\W_])(?=.*\d).+$/;

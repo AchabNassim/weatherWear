@@ -1,7 +1,5 @@
-import blockRefTokens from "../model/blockRefTokens.js";
-import invalidateToken from "../model/invalidateToken.js";
-import fetchRefToken from "../model/fetchRefToken.js";
-import verifyToken from "../helpers/verifyToken.js";
+import verifyToken from "../lib/helpers/verifyToken.js";
+import { fetchRefToken, invalidateToken, blockRefTokens } from "../queries/refTokenQueries.js";
 
 const refreshToken = async (req, res, next) => {
     // check if authorization header is present

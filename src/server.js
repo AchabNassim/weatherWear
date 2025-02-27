@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser';
 import router from './routes/router.js';
-import storeSuggestions from './helpers/storeSuggestions.js';
+import storeSuggestions from './lib/helpers/storeSuggestions.js';
 
 storeSuggestions();
 

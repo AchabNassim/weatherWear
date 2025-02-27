@@ -1,6 +1,5 @@
-import modifyKey from "../model/modifyKey.js";
-import fetchKey from "../model/fetchKey.js";
 import { v4 as uuidv4 } from 'uuid';
+import { fetchKey, modifyKey } from "../queries/keyQueries.js";
 
 const updateKey = async (req, res) => {
     const id = res.locals.user.id;

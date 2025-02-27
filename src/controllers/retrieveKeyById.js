@@ -1,4 +1,4 @@
-import fetchKeyById from '../model/fetchKeyById.js';
+import { fetchKeyById } from '../queries/keyQueries.js';
 
 const retrieveKeyById = async (req, res) => {
     const id = res.locals.user.id;

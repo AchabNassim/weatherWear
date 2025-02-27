@@ -1,9 +1,8 @@
-import fetchKey from '../model/fetchKey.js';
-import decrementToken from '../model/decrementToken.js';
-import insertHistory from '../model/insertHistory.js';
-import setCache from '../helpers/setCache.js';
-import retrieveCache from '../helpers/retrieveCache.js';
+import setCache from '../lib/helpers/setCache.js';
+import retrieveCache from '../lib/helpers/retrieveCache.js';
 import redisClient from '../config/redisConnection.js';
+import { fetchKey, decrementToken } from '../queries/keyQueries.js';
+import { insertHistory } from '../queries/userHistoryQueries.js';
 
 const validateKey = async (key) => {
     if (!key) {

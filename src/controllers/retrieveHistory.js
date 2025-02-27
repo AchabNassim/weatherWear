@@ -1,4 +1,4 @@
-import fetchUserHistory from '../model/fetchUserHistory.js'
+import { fetchUserHistory } from '../queries/userHistoryQueries.js';
 
 const retrieveHistory = async (req, res) => {
     const userId = req.session.user_id;
